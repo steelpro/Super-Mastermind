@@ -60,7 +60,7 @@ public class TwoPlayer {
 	/** METHOD FOR PLAYER TO ENTER COMBINATION **/
 	public static void createCombo() {
 		
-		System.out.println("Player one, please enter combination to use "
+		System.out.println("Player one, please enter the combination to use "
 				+ "(player two should not be looking):");
 		
 		combo = input.next();
@@ -76,7 +76,8 @@ public class TwoPlayer {
 	public static void playerGuess() {
 		
 		while (true) {
-			System.out.println("TURN " + counter + " - Player two, please enter your combination (Q to quit, R to view records):");
+			
+			System.out.println("TURN " + counter + " - Player two, please enter your combination (Q to quit, V to view records):");
 			String choice = input.next();
 			
 			if (choice.toUpperCase().equals("Q")) { //stop if enters Q
@@ -84,11 +85,11 @@ public class TwoPlayer {
 				System.exit(1);
 			}
 			
-			else if (choice.toUpperCase().equals("R")) 
+			
+			else if (choice.toUpperCase().equals("V")) 
 				viewRecords();
 			
-			else {
-				
+			else {			
 				while (!isValid(choice)) //loop until player enters valid guess	
 					choice = input.next();	
 				
@@ -119,8 +120,7 @@ public class TwoPlayer {
 		
 		while (true) {
 		
-			System.out.println("Player one, please give your results (C to check code): ");
-			
+			System.out.println("Player one, please give your results (C to check code): ");	
 			value = input.next();	
 			
 			if (value.toUpperCase().equals("C")) //stop if enters Q
