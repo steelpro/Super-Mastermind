@@ -103,10 +103,10 @@ public class TwoPlayer {
 	
 	/** METHOD TO VIEW STORED RECORDS **/
 	public static void viewRecords() {	
-		
+
 		if (!guesses.isEmpty()) {			
-			for (int i = 0; i <= counter - 2; i++) {				
-				System.out.println((i++) + " - CODE: " + guesses.get(i) 
+			for (int i = 0; i < counter - 1; i++) {				
+				System.out.println( (i + 1) + " - CODE: " + guesses.get(i) 
 					+ " | RESULT: " + results.get(i));
 			}
 		}
