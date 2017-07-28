@@ -92,9 +92,8 @@ public class TwoPlayer {
 			else {			
 				while (!isValid(choice)) //loop until player enters valid guess	
 					choice = input.next();	
-				
-				for (int i = 0; i <= 4; i++) //add guess to character array list
-					guesses.add(choice.toUpperCase());	
+
+					guesses.add(choice.toUpperCase()); //add guess to character array list
 				
 				break;
 			}
