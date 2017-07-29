@@ -119,11 +119,16 @@ public class TwoPlayer {
 		
 		while (true) {
 		
-			System.out.println("Player one, please give your results (C to check code): ");	
+			System.out.println("Player one, please give your results (C to check code, S to skip): ");	
 			value = input.next();	
 			
 			if (value.toUpperCase().equals("C")) //stop if enters Q
 				System.out.println("Code: " + combo);	
+			else if (value.toUpperCase().equals("S")) {
+				value = "";
+				results.add(value);
+				break;
+			}
 			
 			else {
 				while (!isCheckValid()) //loop until player enters valid result	
