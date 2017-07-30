@@ -49,9 +49,7 @@ public class TwoPlayer {
 		else {
 			System.out.println("\nPlayer one has stumped you! Better luck next time!");
 			
-			System.out.print("Code: "); //reveal combination
-			for (int i = 0; i <= 4; i++) 
-			  	System.out.print(combo);
+			System.out.print("Code: " + combo); //reveal combination
 		}
 		
 		input.nextLine(); input.nextLine();
